@@ -1,39 +1,9 @@
 const https = require("https");
-//Note:if you want specific test case then remove comments"/*.....*/""
-//or if you want only one test case then comment another one
-//use command node index.js
-
-//1
-
-/*https
-  .get("https://jsonplaceholder.typicode.com/todos", (resp) => {
-    let data = "";
-    let list = [];
-
-    resp.on("data", (chunk) => {
-      data += chunk;
-    });
-
-    resp.on("end", () => {
-      let todoId = JSON.parse(data);
-      todoId.map((eachItem) => {
-        let id = eachItem.id;
-        let title = eachItem.title;
-        let completed = eachItem.completed;
-        let a = { id, title, completed };
-        list.push(a);
-      });
-      console.log(list);
-    });
-  })
-  .on("error", (err) => {
-    console.log("Error: " + err.message);
-  });*/
-
-//2
-
-/*https
-  .get("https://jsonplaceholder.typicode.com/users/11", (resp) => {
+//testCase 2
+//enter your user id "https://jsonplaceholder.typicode.com/users/<user_id>""
+//node testCase2.js
+https
+  .get("https://jsonplaceholder.typicode.com/users/10", (resp) => {
     let data = "";
     let object = {};
     resp.on("data", (chunk) => {
@@ -81,4 +51,3 @@ const https = require("https");
   .on("error", (err) => {
     console.log("Error: " + err.message);
   });
-*/
